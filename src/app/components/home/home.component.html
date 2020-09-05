@@ -1,0 +1,23 @@
+<app-loading *ngIf=loading></app-loading>
+
+<div *ngIf="error" class="alert alert-warning alert-dismissible fade show" role="alert">
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+  <strong>{{ messageError }}</strong>
+</div>
+
+<app-card [items]="newCharacters"></app-card>
+
+<div class="mx-auto" style="width: 200px;">
+  <div>
+    <ul class="pagination pagination-sm">
+      <li class="page-item">
+        <a class="page-link" (click)="anterior()" style="cursor: pointer;">Anterior</a>
+      </li>
+      <li class="page-item">
+        <a class="page-link" (click)="siguiente()" style="cursor: pointer;">Siguiente</a>
+      </li>
+    </ul>
+  </div>
+</div>

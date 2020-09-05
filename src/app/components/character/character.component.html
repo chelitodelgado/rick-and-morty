@@ -1,0 +1,26 @@
+<app-loading *ngIf=loading></app-loading>
+
+<div *ngIf=!loading class="jumbotron m-5">
+    <h1 class="display-3">{{info.name}}</h1>
+    <div class="row">
+      <div class="col-ms m-1 animated fadeIn">
+        <img class="img-fluid" [src]="info.image" [alt]="info.image">
+      </div>
+      <div class="col-ms m-1">
+        <p class="lead">
+          Genero: {{info.gender}}
+        </p>
+        <p class="lead">
+          Estatus: {{info.status}}
+      </p>
+      <p class="lead">
+          Especie: {{info.species}}
+      </p>
+      <p class="lead">
+          Fecha de nacimiento: {{ info.created | date }}
+      </p>
+      </div>
+    </div>
+    <hr class="my-4">
+  
+  </div>

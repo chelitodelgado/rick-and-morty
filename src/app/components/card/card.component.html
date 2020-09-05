@@ -1,0 +1,19 @@
+
+<section>
+
+    <div *ngIf="items" class="gallery m-5" id="gallery">
+  
+      <div id="pointer" (click)="viewCharacter( item )" *ngFor="let item of items" class="mb-3 pics all 2 animated fadeIn">
+        <a>
+          <img class="img-fluid z-depth-1 rounded animated fadeIn" [src]="item.image"
+            alt="Card image cap">
+        </a>
+        <div class="mask flex-center waves-effect waves-light rgba-teal-strong rounded">
+          <p class="white-text">{{ item.name }}</p>
+        </div>
+      </div>
+  
+    </div>
+    
+  </section>
+  

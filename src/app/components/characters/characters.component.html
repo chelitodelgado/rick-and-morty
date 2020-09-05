@@ -1,0 +1,6 @@
+    
+<input #termino (keyup)="search(termino.value)" class="form-control mr-sm-2" type="text" placeholder="Search">
+<app-loading *ngIf="loading"></app-loading>
+<app-card *ngIf="!loading" [items]="characters"></app-card>
+
+
